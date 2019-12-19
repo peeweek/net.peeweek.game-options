@@ -13,8 +13,7 @@ namespace GameOptionsUtility
 
         public static GraphicOptions graphics;
 
-        [RuntimeInitializeOnLoadMethod]
-        static void InitializeGameOptions()
+        static GameOptions()
         {
             graphics = GraphicOptions.Load();
             graphics.Apply();
