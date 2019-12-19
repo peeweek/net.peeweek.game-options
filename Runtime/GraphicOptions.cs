@@ -79,9 +79,9 @@ namespace GameOptionsUtility
 
         public void Apply()
         {
+            Screen.SetResolution(width, height, fullScreenMode, refreshRate);
             QualitySettings.vSyncCount = vSync ? 1 : 0;
             Application.targetFrameRate = targetFrameRate;
-            Screen.SetResolution(width, height, fullScreenMode, refreshRate);
         }
     }
 }

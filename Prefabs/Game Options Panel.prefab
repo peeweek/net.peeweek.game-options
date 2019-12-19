@@ -655,8 +655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -34}
-  m_SizeDelta: {x: -64, y: -132}
+  m_AnchoredPosition: {x: 0, y: -6.3999023}
+  m_SizeDelta: {x: -64, y: -187.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8012737720674481456
 CanvasRenderer:
@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 2032027683997489264}
   - component: {fileID: 6597609316367024570}
   - component: {fileID: 3555777956663233269}
+  - component: {fileID: 5840488368951814014}
   m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
@@ -881,9 +882,9 @@ RectTransform:
   m_Father: {fileID: 8012737718865955859}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -367}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 45}
   m_SizeDelta: {x: 320, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2032027683997489264
@@ -965,6 +966,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5840488368951814014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399893353193325301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c447adeba83444780bfd5b469e0a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyGraphics: 1
 --- !u!1 &8640587383989323684
 GameObject:
   m_ObjectHideFlags: 0
