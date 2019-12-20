@@ -66,6 +66,8 @@ namespace GameOptionsUtility
         protected int m_DefaultHeight = 720;
         [SerializeField]
         protected int m_DefaultRefreshRate = 60;
+        [SerializeField]
+        protected int m_DefaultMonitor = 0;
 
         public static GraphicOptions Load()
         {
