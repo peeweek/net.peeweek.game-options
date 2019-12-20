@@ -268,7 +268,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -560,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 6930701346793127765, guid: 1c767a00d4fc8d44a8de55cd23980091,
         type: 3}
       propertyPath: m_Name
-      value: GameOptionEntrySlider
+      value: GameOptionEntrySlider Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6948966462117553428, guid: 1c767a00d4fc8d44a8de55cd23980091,
         type: 3}
