@@ -37,7 +37,7 @@ namespace GameOptionsUtility
                 if (!dropdown.options.Any(o => o.text == option))
                 {
                     dropdown.options.Add(new Dropdown.OptionData(option));
-                    if (res.width == GameOptions.graphics.width && res.height == GameOptions.graphics.height)
+                    if (res.width == GameOption.Get<GraphicOption>().width && res.height == GameOption.Get<GraphicOption>().height)
                         selected = i;
                     i++;
                 }
@@ -57,8 +57,8 @@ namespace GameOptionsUtility
         {
             string option = GetComponent<Dropdown>().options[value].text;
             string[] values = option.Split('x');
-            GameOptions.graphics.width = int.Parse(values[0]);
-            GameOptions.graphics.height = int.Parse(values[1]);
+            GameOption.Get<GraphicOption>().width = int.Parse(values[0]);
+            GameOption.Get<GraphicOption>().height = int.Parse(values[1]);
         }
     }
 

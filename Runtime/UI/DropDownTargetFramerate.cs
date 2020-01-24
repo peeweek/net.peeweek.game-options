@@ -31,13 +31,13 @@ namespace GameOptionsUtility
                 dropdown.options.Add(new Dropdown.OptionData(framerate == -1? InfiniteText : framerate.ToString()));
             }
 
-            int current = GameOptions.graphics.targetFrameRate;
+            int current = GameOption.Get<GraphicOption>().targetFrameRate;
             dropdown.SetValueWithoutNotify(dropdown.options.FindIndex(o => o.text == current.ToString()));
         }
 
         void UpdateOptions(int value)
         {
-            GameOptions.graphics.targetFrameRate = TargetFramerates[value];
+            GameOption.Get<GraphicOption>().targetFrameRate = TargetFramerates[value];
         }
     }
 

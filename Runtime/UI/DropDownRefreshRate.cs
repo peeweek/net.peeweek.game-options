@@ -30,12 +30,12 @@ namespace GameOptionsUtility
             int i = 0;
             foreach (var res in Screen.resolutions)
             {
-                if(res.width == GameOptions.graphics.width && res.height == GameOptions.graphics.height)
+                if(res.width == GameOption.Get<GraphicOption>().width && res.height == GameOption.Get<GraphicOption>().height)
                 {
                     if (!dropdown.options.Any(o => o.text == res.refreshRate.ToString()))
                         dropdown.options.Add(new Dropdown.OptionData(res.refreshRate.ToString()));
 
-                    if (GameOptions.graphics.refreshRate == res.refreshRate)
+                    if (GameOption.Get<GraphicOption>().refreshRate == res.refreshRate)
                         selected = i;
 
                     i++;
@@ -46,7 +46,7 @@ namespace GameOptionsUtility
 
         void UpdateOptions(int value)
         {
-            GameOptions.graphics.refreshRate = int.Parse(GetComponent<Dropdown>().options[value].text);
+            GameOption.Get<GraphicOption>().refreshRate = int.Parse(GetComponent<Dropdown>().options[value].text);
         }
     }
 

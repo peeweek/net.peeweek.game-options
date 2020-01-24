@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameOptionsUtility
 {
-    public class GraphicOptions : ScriptableObject
+    internal class GraphicOption : GameOption
     {
         public class Preferences
         {
@@ -69,17 +69,9 @@ namespace GameOptionsUtility
         [SerializeField]
         protected int m_DefaultMonitor = 0;
 
-        public static GraphicOptions Load()
-        {
-            var graphics = Resources.Load<GraphicOptions>(nameof(GraphicOptions));
-            if (graphics == null)
-            {
-                graphics = CreateInstance<GraphicOptions>();
-            }
-            return graphics;
-        }
 
-        public void Apply()
+
+        public override void Apply()
         {
             Screen.SetResolution(width, height, fullScreenMode, refreshRate);
             QualitySettings.vSyncCount = vSync ? 1 : 0;

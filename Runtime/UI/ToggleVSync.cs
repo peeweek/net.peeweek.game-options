@@ -8,9 +8,13 @@ namespace GameOptionsUtility
     [RequireComponent(typeof(Toggle))]
     public class ToggleVSync : MonoBehaviour
     {
+        public Dropdown targetFrameRateDropdown;
+
         private void OnEnable()
         {
+            InitializeEntries();
             GetComponent<Toggle>().onValueChanged.AddListener(UpdateOptions);
+            UpdateTargetFramerate(GameOption.Get<GraphicOption>().vSync);
         }
 
         private void OnDisable()
@@ -20,12 +24,23 @@ namespace GameOptionsUtility
 
         public void InitializeEntries()
         {
-            GetComponent<Toggle>().isOn = GameOptions.graphics.vSync;
+            GetComponent<Toggle>().isOn = GameOption.Get<GraphicOption>().vSync;
         }
 
         void UpdateOptions(bool value)
         {
-            GameOptions.graphics.vSync = value;
+            GameOption.Get<GraphicOption>().vSync = value;
+            UpdateTargetFramerate(value);
+        }
+
+        void UpdateTargetFramerate(bool value)
+        {
+            if (targetFrameRateDropdown != null)
+            {
+                targetFrameRateDropdown.interactable = !value;
+                targetFrameRateDropdown.captionText.CrossFadeAlpha(value ? 0.1f : 1.0f, targetFrameRateDropdown.colors.fadeDuration, true);
+            }
+
         }
     }
 
