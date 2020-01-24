@@ -11,7 +11,7 @@ namespace GameOptionsUtility
 
         static Dictionary<Type, GameOption> s_GameOptions;
 
-        internal static T Get<T>() where T : GameOption
+        public static T Get<T>() where T : GameOption
         {
             if (s_GameOptions == null)
                 s_GameOptions = new Dictionary<Type, GameOption>();
