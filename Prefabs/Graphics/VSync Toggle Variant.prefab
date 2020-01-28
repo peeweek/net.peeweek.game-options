@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2af8e5a631fd24991bfe567b038767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetFrameRateDropdown: {fileID: 0}
 --- !u!1001 &2631596637362247864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,6 +129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VSync Toggle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560855871935002771, guid: 36fc23dca840baf4cab245f329a4d8a4,
+        type: 3}
+      propertyPath: m_Text
+      value: VSync
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36fc23dca840baf4cab245f329a4d8a4, type: 3}

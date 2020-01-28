@@ -15,6 +15,8 @@ namespace GameOptionsUtility
             public const string resolutionWidth = prefix + "ResolutionWidth";
             public const string resolutionHeight = prefix + "ResolutionHeight";
             public const string refreshRate = prefix + "RefreshRate";
+            public const string quality = prefix + "Quality";
+
         }
 
         public FullScreenMode fullScreenMode
@@ -50,6 +52,11 @@ namespace GameOptionsUtility
             get { return PlayerPrefs.GetInt(Preferences.refreshRate, m_DefaultRefreshRate); }
             set { PlayerPrefs.SetInt(Preferences.refreshRate, value); }
         }
+        public int quality
+        {
+            get { return PlayerPrefs.GetInt(Preferences.quality, QualitySettings.GetQualityLevel()); }
+            set { PlayerPrefs.SetInt(Preferences.quality, value);  QualitySettings.SetQualityLevel(value); }
+        }
 
         [Header("Defaults")]
         [SerializeField]
@@ -66,10 +73,6 @@ namespace GameOptionsUtility
         protected int m_DefaultHeight = 720;
         [SerializeField]
         protected int m_DefaultRefreshRate = 60;
-        [SerializeField]
-        protected int m_DefaultMonitor = 0;
-
-
 
         public override void Apply()
         {
