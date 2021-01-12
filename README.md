@@ -1,6 +1,8 @@
 # Game Options
 Game Options UI Elements for Unity Games
 
+![Game Options](https://raw.githubusercontent.com/peeweek/net.peeweek.game-options/master/Documentation%7E/game-options.png)
+
 This package provides Game UI in order to change graphic options, resolution, refresh rate and full screen modes.
 
 ## Installing
