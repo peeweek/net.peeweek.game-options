@@ -1,4 +1,7 @@
 # Game Options
+
+[![openupm](https://img.shields.io/npm/v/net.peeweek.game-options?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/net.peeweek.game-options/)
+
 Game Options UI Elements for Unity Games
 
 ![Game Options](https://raw.githubusercontent.com/peeweek/net.peeweek.game-options/master/Documentation%7E/game-options.png)
