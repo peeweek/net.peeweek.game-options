@@ -46,12 +46,16 @@ namespace GameOptionsUtility
             }
         }
 
+        public static event Action onApply;
+
         public static void Apply()
         {
             foreach(var gameOption in GameOption.all)
             {
                 gameOption.Apply();
             }
+
+            onApply?.Invoke();
         }
     }
 }
