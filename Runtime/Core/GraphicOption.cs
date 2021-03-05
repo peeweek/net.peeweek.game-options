@@ -55,7 +55,7 @@ namespace GameOptionsUtility
         public int quality
         {
             get { return PlayerPrefs.GetInt(Preferences.quality, QualitySettings.GetQualityLevel()); }
-            set { PlayerPrefs.SetInt(Preferences.quality, value);  QualitySettings.SetQualityLevel(value); }
+            set { PlayerPrefs.SetInt(Preferences.quality, value); }
         }
 
         [Header("Defaults")]
@@ -79,6 +79,7 @@ namespace GameOptionsUtility
             Screen.SetResolution(width, height, fullScreenMode, refreshRate);
             QualitySettings.vSyncCount = vSync ? 1 : 0;
             Application.targetFrameRate = targetFrameRate;
+            QualitySettings.SetQualityLevel(quality);
         }
     }
 }
