@@ -8,5 +8,10 @@
   "type": "tool",
   "dependencies": {
     "com.unity.ugui": "1.0.0"
+  },
+  "author" : 
+  {
+    "name" : "PeeWeeK.NET",
+    "url" : "https://github.com/peeweek/"
   }
 }
