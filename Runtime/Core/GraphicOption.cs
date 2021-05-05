@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameOptionsUtility
 {
-    internal class GraphicOption : GameOption
+    public class GraphicOption : GameOption
     {
         public class Preferences
         {

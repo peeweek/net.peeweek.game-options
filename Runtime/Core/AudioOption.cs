@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 namespace GameOptionsUtility
 {
-    internal class AudioOption : GameOption
+    public class AudioOption : GameOption
     {
         public class Preferences
         {
